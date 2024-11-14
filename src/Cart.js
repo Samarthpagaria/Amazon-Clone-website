@@ -6,12 +6,13 @@ import CartProduct from "./CartProduct";
 import { InsertEmoticon } from "@mui/icons-material";
 
 const Cart = () => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
   return (
     <div>
       <div className="cart">
         <div className="cart_left">
           <div>
+            <h3>Hello , {user.email}</h3>
             <h2 className="cart_title">Your Shopping Basket</h2>
             {basket.map((item) => (
               <CartProduct
